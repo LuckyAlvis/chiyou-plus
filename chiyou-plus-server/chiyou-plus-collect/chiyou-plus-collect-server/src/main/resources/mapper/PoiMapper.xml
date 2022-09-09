@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shuwei.dai.chiyoupluscollectserver.mapper.PoiMapper">
+
+    <resultMap id="BaseResultMap" type="com.shuwei.dai.collect.entity.Poi">
+        <id property="id" column="id" jdbcType="VARCHAR"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="province" column="province" jdbcType="VARCHAR"/>
+        <result property="provinceCode" column="province_code" jdbcType="INTEGER"/>
+        <result property="city" column="city" jdbcType="VARCHAR"/>
+        <result property="cityCode" column="city_code" jdbcType="INTEGER"/>
+        <result property="region" column="region" jdbcType="VARCHAR"/>
+        <result property="regionCode" column="region_code" jdbcType="INTEGER"/>
+        <result property="mall" column="mall" jdbcType="VARCHAR"/>
+        <result property="mallCode" column="mall_code" jdbcType="VARCHAR"/>
+        <result property="longitude" column="longitude" jdbcType="DOUBLE"/>
+        <result property="latitude" column="latitude" jdbcType="DOUBLE"/>
+        <result property="address" column="address" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="TINYINT"/>
+        <result property="remark" column="remark" jdbcType="VARCHAR"/>
+        <result property="gmtCreate" column="gmt_create" jdbcType="TIMESTAMP"/>
+        <result property="gmtModified" column="gmt_modified" jdbcType="TIMESTAMP"/>
+        <result property="account" column="account" jdbcType="TINYINT"/>
+        <result property="positionAndNum" column="position_and_num" jdbcType="VARCHAR"/>
+        <result property="taskType" column="task_type" jdbcType="INTEGER"/>
+        <result property="projectCode" column="project_code" jdbcType="VARCHAR"/>
+        <result property="projectName" column="project_name" jdbcType="VARCHAR"/>
+        <result property="collectType" column="collect_type" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,name,province,
+        province_code,city,city_code,
+        region,region_code,mall,
+        mall_code,longitude,latitude,
+        address,status,remark,
+        gmt_create,gmt_modified,account,
+        position_and_num,task_type,project_code,
+        project_name,collect_type
+    </sql>
+</mapper>
