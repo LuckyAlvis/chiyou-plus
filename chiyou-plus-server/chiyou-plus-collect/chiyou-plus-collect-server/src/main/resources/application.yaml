@@ -1,3 +1,5 @@
+server:
+  port: 3080
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
@@ -5,3 +7,9 @@ spring:
     url: jdbc:mysql://localhost:3306/chiyou-plus?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowMultiQueries=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
     username: root
     password: 123456
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.106.168.110:8848
+  application:
+    name: chiyou-plus-collect-service
