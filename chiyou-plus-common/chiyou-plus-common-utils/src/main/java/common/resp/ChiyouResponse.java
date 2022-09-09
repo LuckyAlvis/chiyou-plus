@@ -1,12 +1,18 @@
 package common.resp;
 
 import common.constant.EnumStatus;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @description: chiyou响应体
  * @author: daiyifan
  * @create: 2022/9/8 13:35
  */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ChiyouResponse<T> {
     private int status;
     private String message;

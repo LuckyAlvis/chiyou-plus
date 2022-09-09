@@ -14,14 +14,17 @@ import java.util.List;
 public class ChiyouPage<T> {
     private long current;
     private long size;
+    private long pages;
     private long total;
-    private List<T> records;
+    private List<T> data;
 
     public static <T> ChiyouPage<T> get(Page<T> page) {
         ChiyouPage<T> chiyouPage = new ChiyouPage<>();
         chiyouPage.setCurrent(page.getCurrent());
         chiyouPage.setSize(page.getSize());
-        chiyouPage.setRecords(page.getRecords());
+        chiyouPage.setTotal(page.getTotal());
+        chiyouPage.setPages(page.getPages());
+        chiyouPage.setData(page.getRecords());
         return chiyouPage;
     }
 }

@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.shuwei.dai.chiyoupluscollectserver.service.PoiService;
 import com.shuwei.dai.collect.entity.Poi;
+import com.shuwei.dai.collect.feign.PoiRemoteService;
 import com.shuwei.dai.collect.req.PoiPageReq;
 import com.shuwei.dai.collect.req.PoiSaveReq;
 import common.resp.ChiyouPage;
@@ -13,7 +14,6 @@ import lombok.AllArgsConstructor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -23,12 +23,11 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @AllArgsConstructor
-@RequestMapping("/poi")
-public class PoiController {
+public class PoiController implements PoiRemoteService {
 
     private final PoiService poiService;
 
-    @PostMapping("/listPage")
+    @PostMapping("/poi/listPage")
     public ChiyouResponse<ChiyouPage<Poi>> listPage(@RequestBody PoiPageReq req) {
         Page<Poi> poiPage = new Page<>(req.getCurrent(), req.getSize());
         Poi poi = new Poi();
@@ -36,7 +35,7 @@ public class PoiController {
         return ChiyouResponse.success(ChiyouPage.get(poiService.page(poiPage, Wrappers.lambdaQuery(poi))));
     }
 
-    @PostMapping("/savePoi")
+    @PostMapping("/poi/savePoi")
     public ChiyouResponse<Integer> savePoi(@RequestBody PoiSaveReq req) {
         return ChiyouResponse.success(poiService.savePoi(req));
     }
