@@ -22,11 +22,11 @@ import org.springframework.web.bind.annotation.RestController;
  * @create: 2022/9/8 14:52
  */
 @RestController
-@RequestMapping("/poi")
 @AllArgsConstructor
+@RequestMapping("/poi")
 public class PoiController {
 
-    private PoiService poiService;
+    private final PoiService poiService;
 
     @PostMapping("/listPage")
     public ChiyouResponse<ChiyouPage<Poi>> listPage(@RequestBody PoiPageReq req) {
