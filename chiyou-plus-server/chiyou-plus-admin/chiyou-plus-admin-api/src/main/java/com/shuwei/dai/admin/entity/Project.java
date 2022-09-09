@@ -14,37 +14,31 @@ import java.util.Date;
 @TableName(value = "project")
 @Data
 public class Project implements Serializable {
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
     /**
      * id
      */
     @TableId
     private Integer id;
-
     /**
      * 项目code
      */
     private String projectCode;
-
     /**
      * 项目名称
      */
     private String projectName;
-
     /**
      * 项目描述
      */
     private String description;
-
     /**
      * 项目备注
      */
     private String remark;
-
     /**
      * 立项时间
      */
     private Date gmtCreate;
-
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
 }
