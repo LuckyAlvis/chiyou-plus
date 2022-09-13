@@ -4,6 +4,7 @@ import common.constant.EnumStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.extern.jackson.Jacksonized;
 
 /**
  * @description: chiyou响应体
@@ -13,6 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Jacksonized
 public class ChiyouResponse<T> {
     private int status;
     private String message;
