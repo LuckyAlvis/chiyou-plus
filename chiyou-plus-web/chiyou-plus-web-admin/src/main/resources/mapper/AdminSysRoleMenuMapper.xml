@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shuwei.dai.chiyoupluswebadmin.admin.mapper.AdminSysRoleMenuMapper">
+
+    <resultMap id="BaseResultMap" type="com.shuwei.dai.chiyoupluswebadmin.admin.domain.entity.AdminSysRoleMenu">
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="roleId" column="role_id" jdbcType="INTEGER"/>
+        <result property="menuId" column="menu_id" jdbcType="INTEGER"/>
+        <result property="isDelete" column="is_delete" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,role_id,menu_id,
+        is_delete
+    </sql>
+</mapper>
