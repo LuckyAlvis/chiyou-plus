@@ -12,6 +12,8 @@
     <artifactId>chiyou-plus-common</artifactId>
     <packaging>pom</packaging>
     <modules>
+        <module>chiyou-plus-common-core</module>
+        <module>chiyou-plus-common-mail</module>
         <module>chiyou-plus-common-utils</module>
         <module>chiyou-plus-common-swagger</module>
     </modules>
