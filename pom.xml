@@ -13,6 +13,7 @@
         <module>chiyou-plus-common</module>
         <module>chiyou-plus-server</module>
         <module>chiyou-plus-web</module>
+        <module>chiyou-plus-schedule</module>
     </modules>
 
     <properties>
