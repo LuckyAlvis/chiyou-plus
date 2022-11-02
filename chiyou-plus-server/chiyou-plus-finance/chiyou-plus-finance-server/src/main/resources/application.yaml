@@ -1,5 +1,5 @@
 server:
-  port: 3080
+  port: 8090
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
@@ -11,5 +11,9 @@ spring:
     nacos:
       discovery:
         server-addr: 47.106.168.110:8848
+  redis:
+    host: daiyifan-mozi.redis.rds.aliyuncs.com
+    port: 6379
+    password: Cd40k1SKIXBQRedis
   application:
-    name: chiyou-plus-collect-service
+    name: chiyou-plus-finance-service

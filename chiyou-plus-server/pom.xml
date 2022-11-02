@@ -18,6 +18,7 @@
         <module>chiyou-plus-admin</module>
         <module>chiyou-plus-analyze</module>
         <module>chiyou-plus-collect</module>
+        <module>chiyou-plus-finance</module>
     </modules>
 
     <dependencies>

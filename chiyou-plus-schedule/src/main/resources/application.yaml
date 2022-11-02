@@ -1,5 +1,5 @@
 server:
-  port: 3080
+  port: 9001
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
@@ -7,9 +7,7 @@ spring:
     url: jdbc:mysql://rm-wz963ju312wgv19502o.mysql.rds.aliyuncs.com:3306/chiyou-plus?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowMultiQueries=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
     username: mozi_root
     password: Cd40k1SKIXBQ
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 47.106.168.110:8848
-  application:
-    name: chiyou-plus-collect-service
+mail:
+  myEmailAccount: 252127196@qq.com # 平台邮箱地址
+  myEmailPassword: eutotwjahmfhbhgj # 平台邮箱密码
+  senderPersonalName: Chiyou提醒助手 # 平台邮箱发件人昵称
