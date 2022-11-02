@@ -16,6 +16,7 @@
         <module>chiyou-plus-common-mail</module>
         <module>chiyou-plus-common-utils</module>
         <module>chiyou-plus-common-swagger</module>
+        <module>chiyou-plus-common-redis</module>
     </modules>
 
     <dependencies>

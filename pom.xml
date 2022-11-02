@@ -25,7 +25,9 @@
         <springfox-swagger2-version>3.0.0</springfox-swagger2-version>
         <mybatis-plus.version>3.3.1</mybatis-plus.version>
         <alibaba.druid.version>1.0.26</alibaba.druid.version>
-        <mysql-connector-version>8.0.29</mysql-connector-version>
+        <mysql-connector.version>8.0.29</mysql-connector.version>
+        <redisson.version>3.17.7</redisson.version>
+        <commons-lang3.version>3.8.1</commons-lang3.version>
     </properties>
 
     <dependencyManagement>
@@ -64,13 +66,23 @@
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>${mysql-connector-version}</version>
+                <version>${mysql-connector.version}</version>
             </dependency>
             <!--druid数据库连接池 -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
                 <version>${alibaba.druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
