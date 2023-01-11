@@ -1,4 +1,6 @@
 *.xml
+!pom.xml
+!*Mapper.xml
 *.iml
 *.class
 **/**/target/**
