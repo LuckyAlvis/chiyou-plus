@@ -1,13 +1,11 @@
 package com.shuwei.dai.schedule.service.impl;
 
-import com.shuwei.dai.chiyouplusfinanceserver.service.BillService;
 import com.shuwei.dai.common.mail.utils.ChiyouMailHelper;
 import com.shuwei.dai.schedule.service.FinanceTaskService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.time.LocalDateTime;
 
 @Slf4j
@@ -23,9 +21,6 @@ public class FinanceTaskServiceImpl implements FinanceTaskService {
     @Value("${mail.senderPersonalName}")
     String senderPersonalName;
 
-    @Resource
-    private BillService billService;
-
     @Override
     public void sendBillMail() {
         log.error("财务定时任务执行{}", LocalDateTime.now());
@@ -35,7 +30,7 @@ public class FinanceTaskServiceImpl implements FinanceTaskService {
                     senderPersonalName,
                     "252127196@qq.com",
                     "主题",
-                    billService.getBillDetailMailContent());
+                    "test text");
         } catch (Exception e) {
             log.error("send Bill email error", e);
         }
